@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import requests
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 ROBOFLOW_API_URL = "https://detect.roboflow.com/penyakit-daun-padi-kumqp/1?api_key=gyZFta9jhWeEDO9nlnZo"
 
